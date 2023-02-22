@@ -36,7 +36,8 @@
     "vite-plugin-compression": "^0.5.1"
   },
   "lint-staged": {
-    "*.{js,jsx}": "npm run lint:js"
+    "*.{js,jsx}": "npm run lint:js",
+    "*.js": "eslint --cache --fix"
   },
   "config": {
     "commitizen": {
