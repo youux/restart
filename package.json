@@ -8,19 +8,31 @@
     "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky install",
-    "lint:js": "eslint --ext .js,.jsx src"
+    "lint:js": "eslint --ext .js,.jsx src",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.0",
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-vite": "^0.4.2",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-legacy": "^4.0.1",
     "@vitejs/plugin-react": "^3.1.0",
+    "babel-loader": "^8.3.0",
     "commitizen": "^4.3.0",
     "cz-customizable": "^7.0.0",
     "eslint": "^8.34.0",
@@ -29,15 +41,16 @@
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-storybook": "^0.6.11",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
     "postcss-preset-env": "^8.0.1",
+    "sass": "^1.58.3",
     "vite": "^4.1.0",
     "vite-plugin-compression": "^0.5.1"
   },
   "lint-staged": {
-    "*.{js,jsx}": "npm run lint:js",
-    "*.js": "eslint --cache --fix"
+    "*.{js,jsx}": "npm run lint:js"
   },
   "config": {
     "commitizen": {

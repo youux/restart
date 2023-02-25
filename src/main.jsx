@@ -1,11 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
-import App from './App'
-import './index.css'
-
+import { BrowserRouter } from 'react-router-dom'
+// 全局样式
+import './default.css'
+// 路由
+import Routes from './Routes.jsx'
+// 主体
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   </React.StrictMode>
 )

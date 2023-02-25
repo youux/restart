@@ -4,10 +4,7 @@ module.exports = {
     es2021: true,
     node: true
   },
-  extends: [
-    'plugin:react/recommended',
-    'standard'
-  ],
+  extends: ['plugin:react/recommended', 'standard', 'plugin:storybook/recommended'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -15,9 +12,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: [
-    'react'
-  ],
+  plugins: ['react'],
   settings: {
     react: {
       version: 'detect'
@@ -29,8 +24,12 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'react/jsx-curly-spacing': [2, 'never'],
-    indent: ['error', 2, { SwitchCase: 1 }], // 使用两个空格作缩进
-    eqeqeq: ['error', 'smart'], // 比较的时候使用严格等于
+    indent: ['error', 2, {
+      SwitchCase: 1
+    }],
+    // 使用两个空格作缩进
+    eqeqeq: ['error', 'smart'],
+    // 比较的时候使用严格等于
     'keyword-spacing': 2 // 关键字前后的空格
   }
-}
+};
